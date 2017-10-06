@@ -2,31 +2,30 @@
 
 namespace agua
 {
-    class Program
+    class Programas
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
+            DateTime fecha = DateTime.Today;
+            Console.WriteLine("Cuantos min tardas en bañarte?");            
+            var tiempo = Console.ReadLine();
+            int inttiempo = int.Parse(tiempo);
+            var botellas = inttiempo * 12;
+            Console.WriteLine($"tu gastas alrededor de {botellas} botellas de agua cuando te bañas");
+            Console.WriteLine($"Cuando cumples años?    Ejemplo: 23/09/2017"); 
+            var dias = Console.ReadLine(); 
+            DateTime tim = DateTime.Parse(dias);
+            if(tim>fecha){
+            TimeSpan ts = tim - fecha;
+            int diasfalta = ts.Days;
+            var rp = diasfalta * botellas;
+            Console.WriteLine($"hasta tu cumpleaños gastaras {rp} botellas de agua al bañarte");
+            }
+            else{
+                Console.WriteLine("Lo sentimos la fecha ingresada fue anterior ala de hoy.");
+            }
         }
-
-
-
-        ///<summary>
-        ///Calcula el número de botella dependiendo de los minutos 
-        ///cada minuto equivale a 12 botellas
-        ///</summary>
-        static int calcularBotella(int minutos)
-        {
-            return 0;
-        }
-
-        ///<summary>
-        ///Calcula el número de días restantes hasta la fecha dada
-        ///</summary>
-        static int calcularDiasRestantes(DateTime fechaCumple)
-        {
-            return 0;
-        }
+    //Carlos Alejandro Villegas Nuñez
+    //Reyes Aceves Sergio
     }
 }
